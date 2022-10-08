@@ -1,7 +1,7 @@
 import{initializeApp} from 'firebase/app';
 import { getFirestore, collection,doc, getDocs, setDoc, addDoc, updateDoc } from 'firebase/firestore/lite';
 import * as puppeteer from 'puppeteer';
-
+const test= async()=>{
  const firebaseConfig = {
                 apiKey: "AIzaSyD3w-uYg91oDoL00plKAgd651p_3MyyVYM",
                 authDomain: "sales-hunt.firebaseapp.com",
@@ -15,7 +15,7 @@ import * as puppeteer from 'puppeteer';
     const db =getFirestore(firebaseApp);
     const store = await getDocs(collection(db,"stores"));
  // flipkart add data to firestore
-   async function start(){
+
      console.log("nhfedghfdfhgdh");
     const browser=await puppeteer.launch({  
       //    headless:true,
@@ -96,6 +96,9 @@ import * as puppeteer from 'puppeteer';
    }
 
       await browser.close(); 
-}
-start();
+
+    return "done";
+ } 
+module.exports=test;
+
 
